@@ -95,4 +95,29 @@ class GbsuFtbLaiApplicationTests {
         val expected = "GbsuGbsuGbsuGbsu"
         Assertions.assertThat(converted).isEqualTo(expected)
     }
+
+
+    @Test
+    @DisplayName("should return content with Ftb When number is devided by 5")
+    fun convertNumber_shouldReturnContentWithFtbWhenIsDevivedBy5() {
+        val converted =gbsuFtbLaiService.convertNumber(5)
+        val expected = "Ftb"
+        Assertions.assertThat(converted).contains(expected)
+    }
+    @Test
+    @DisplayName("should return content with Ftb When number contains 5")
+    fun convertNumber_shouldReturnContentWithFtbWhenIsContains5() {
+        val converted =gbsuFtbLaiService.convertNumber(57)
+        val expected = "Ftb"
+        Assertions.assertThat(converted).contains(expected)
+    }
+
+    @Test
+    @DisplayName("should return content with FtbFtb When is devided by 5 and number contains 5")
+    fun convertNumber_shouldReturnContentWithFtbFtbWhenIsDevivedBy5AndIsContains5() {
+        val converted =gbsuFtbLaiService.convertNumber(55)
+        val expected = "FtbFtb"
+        Assertions.assertThat(converted).contains(expected)
+    }
+
 }
