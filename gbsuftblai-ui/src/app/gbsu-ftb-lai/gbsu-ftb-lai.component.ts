@@ -17,6 +17,9 @@ export class GbsuFtbLaiComponent implements OnInit, OnDestroy {
   }
 
   convertNumber(inputNumber: number): void {
+    this.gbsuFtbLaiService.convertNumber(+inputNumber)
+      .pipe()
+      .subscribe(convertedValue => console.log(convertedValue));
   }
 
 }

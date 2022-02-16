@@ -6,16 +6,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './gbsu-ftb-lai-form.component.html'
 })
 export class GbsuFtbLaiFormComponent implements OnInit {
+  myForm: FormGroup;
 
+  @Output()
+  submitNumberOutput = new EventEmitter<number>();
 
-  constructor() {
+  constructor(private fb: FormBuilder) {
 
   }
 
   ngOnInit(): void {
+    this.myForm = this.fb.group({
+      inputNumber:''
+    });
   }
 
-  submitNumber(): void {
+  submitNumber(form: FormGroup): void {
+    ;
+    this.submitNumberOutput.emit(+form.value.inputNumber);
   }
 
 }

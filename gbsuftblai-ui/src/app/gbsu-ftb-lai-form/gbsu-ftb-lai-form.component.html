@@ -1,3 +1,9 @@
-<div class="container"> 
-    To Be Completed
-</div>
+<div class="container">
+    <h2>Gbsu Ftb Lai</h2>
+    <label>Number to convert</label>
+    <form [formGroup]="myForm" (ngSubmit)="submitNumber(myForm)">
+    <input formControlName="inputNumber" type="number"  min="0" class="form-control" placeholder="inputNumber">
+    <br/>
+    <button type="submit" class="btn btn-primary"  >Convert</button>
+        </form>
+</div> 
