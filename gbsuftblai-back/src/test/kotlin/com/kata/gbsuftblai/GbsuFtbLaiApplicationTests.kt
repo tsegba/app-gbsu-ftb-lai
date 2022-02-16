@@ -104,6 +104,7 @@ class GbsuFtbLaiApplicationTests {
         val expected = "Ftb"
         Assertions.assertThat(converted).contains(expected)
     }
+
     @Test
     @DisplayName("should return content with Ftb When number contains 5")
     fun convertNumber_shouldReturnContentWithFtbWhenIsContains5() {
@@ -118,6 +119,33 @@ class GbsuFtbLaiApplicationTests {
         val converted =gbsuFtbLaiService.convertNumber(55)
         val expected = "FtbFtb"
         Assertions.assertThat(converted).contains(expected)
+    }
+    @Test
+    @DisplayName("5 should return FtbFtb")
+    fun convertNumber_5shouldReturnFtbFtb() {
+        val expected = "FtbFtb"
+        Assertions.assertThat(gbsuFtbLaiService.convertNumber(5)).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("51 should return GbsuFtb")
+    fun convertNumber_51shouldReturnGbsuFtb() {
+        val expected = "GbsuFtb"
+        Assertions.assertThat(gbsuFtbLaiService.convertNumber(51)).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("53 should return FtbGbsu")
+    fun convertNumber_53shouldReturnFtbGbsu() {
+        val expected = "FtbGbsu"
+        Assertions.assertThat(gbsuFtbLaiService.convertNumber(53)).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("15 should return GbsuFtbFtb")
+    fun convertNumber_15shouldReturnGbsuFtbFtb() {
+        val expected = "GbsuFtbFtb"
+        Assertions.assertThat(gbsuFtbLaiService.convertNumber(15)).isEqualTo(expected)
     }
 
 }

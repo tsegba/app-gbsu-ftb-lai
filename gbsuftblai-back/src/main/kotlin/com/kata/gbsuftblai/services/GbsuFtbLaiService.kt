@@ -6,24 +6,22 @@ import org.springframework.stereotype.Component
 class GbsuFtbLaiService {
 
     fun convertNumber(inputNumber: Int): String {
+        var keyNumbers = mapOf(3 to "Gbsu",5 to "Ftb")
         var result = ""
-        if(inputNumber % 3 == 0)
-            result = result.plus("Gbsu")
 
-        if(inputNumber % 5 == 0)
-            result = result.plus("Ftb")
-
-        for (char in inputNumber.toString()) {
-            if(char == '3'){
-                result = result.plus("Gbsu")
+        for(keyNumber in keyNumbers.keys){
+            if(inputNumber % keyNumber == 0){
+                result = result.plus(keyNumbers[keyNumber])
             }
         }
         for (char in inputNumber.toString()) {
-            if(char == '5'){
-                result = result.plus("Ftb")
+            if(keyNumbers.containsKey(char.toString().toInt()) ){
+                result = result.plus(keyNumbers[char.toString().toInt()])
             }
         }
         return result
     }
+
+
 
 }
