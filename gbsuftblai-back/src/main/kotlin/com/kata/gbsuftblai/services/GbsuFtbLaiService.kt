@@ -9,8 +9,12 @@ class GbsuFtbLaiService {
         var result = ""
         if(inputNumber % 3 == 0)
             result = result.plus("Gbsu")
-        if(inputNumber.toString().contains('3'))
-            result = result.plus("Gbsu")
+
+        for (char in inputNumber.toString()) {
+            if(char == '3'){
+                result = result.plus("Gbsu")
+            }
+        }
 
         return result
     }

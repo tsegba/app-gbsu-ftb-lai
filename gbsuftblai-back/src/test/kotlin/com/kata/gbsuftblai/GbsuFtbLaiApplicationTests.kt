@@ -80,4 +80,19 @@ class GbsuFtbLaiApplicationTests {
         Assertions.assertThat(converted).contains(expected)
     }
 
+    @Test
+    @DisplayName("33 should return GbsuGbsuGbsu")
+    fun convertNumber_33shouldReturnGbsuGbsuGbsu() {
+        val converted =gbsuFtbLaiService.convertNumber(33)
+        val expected = "GbsuGbsuGbsu"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("333 should return GbsuGbsuGbsuGbsu")
+    fun convertNumber_333shouldReturnGbsuGbsuGbsuGbsu() {
+        val converted =gbsuFtbLaiService.convertNumber(333)
+        val expected = "GbsuGbsuGbsuGbsu"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
 }
