@@ -33,7 +33,13 @@ class GbsuFtbLaiApplicationTests {
     }
 
 
-
+    @Test
+    @DisplayName("21 should return Gbsu")
+    fun convertNumber_21shouldReturnGbsu() {
+        val converted =gbsuFtbLaiService.convertNumber(21)
+        val expected = "Gbsu"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
 
 
 

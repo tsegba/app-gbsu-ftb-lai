@@ -8,8 +8,9 @@ class GbsuFtbLaiService {
     fun convertNumber(inputNumber: Int): String {
         if(inputNumber == 3)
             return "GbsuGbsu"
-        if(inputNumber == 9)
+        if(inputNumber % 3 == 0)
             return "Gbsu"
+
         return ""
     }
 
