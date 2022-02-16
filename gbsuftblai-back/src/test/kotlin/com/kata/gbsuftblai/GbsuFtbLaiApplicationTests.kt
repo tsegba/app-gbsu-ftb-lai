@@ -52,10 +52,32 @@ class GbsuFtbLaiApplicationTests {
     @Test
     @DisplayName("39 should return GbsuGbsu")
     fun convertNumber_39shouldReturnGbsuGbsu() {
-        val converted =gbsuFtbLaiService.convertNumber(30)
+        val converted =gbsuFtbLaiService.convertNumber(39)
         val expected = "GbsuGbsu"
         Assertions.assertThat(converted).isEqualTo(expected)
     }
 
+    @Test
+    @DisplayName("should return content with Gbsu When number is devided by 3")
+    fun convertNumber_shouldReturnContentWithGbsuWhenIsDevivedBy3() {
+        val converted =gbsuFtbLaiService.convertNumber(39)
+        val expected = "Gbsu"
+        Assertions.assertThat(converted).contains(expected)
+    }
+    @Test
+    @DisplayName("should return content with Gbsu When number contains 3")
+    fun convertNumber_shouldReturnContentWithGbsuWhenIsContains3() {
+        val converted =gbsuFtbLaiService.convertNumber(39)
+        val expected = "Gbsu"
+        Assertions.assertThat(converted).contains(expected)
+    }
+
+    @Test
+    @DisplayName("should return content with GbsuGbsu When is devided by 3 and number contains 3")
+    fun convertNumber_shouldReturnContentWithGbsuGbsuWhenIsDevivedBy3AndIsContains3() {
+        val converted =gbsuFtbLaiService.convertNumber(39)
+        val expected = "GbsuGbsu"
+        Assertions.assertThat(converted).contains(expected)
+    }
 
 }

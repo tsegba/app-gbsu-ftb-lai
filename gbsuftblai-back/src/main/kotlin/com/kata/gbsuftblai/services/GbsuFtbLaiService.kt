@@ -6,14 +6,13 @@ import org.springframework.stereotype.Component
 class GbsuFtbLaiService {
 
     fun convertNumber(inputNumber: Int): String {
-        if(inputNumber % 3 == 0 && inputNumber.toString().contains('3'))
-            return "GbsuGbsu"
+        var result = ""
         if(inputNumber % 3 == 0)
-            return "Gbsu"
+            result = result.plus("Gbsu")
         if(inputNumber.toString().contains('3'))
-            return "Gbsu"
+            result = result.plus("Gbsu")
 
-        return ""
+        return result
     }
 
 }
