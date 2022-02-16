@@ -6,7 +6,11 @@ import org.springframework.stereotype.Component
 class GbsuFtbLaiService {
 
     fun convertNumber(inputNumber: Int): String {
-        return "GbsuGbsu"
+        if(inputNumber == 3)
+            return "GbsuGbsu"
+        if(inputNumber == 9)
+            return "Gbsu"
+        return ""
     }
 
 }

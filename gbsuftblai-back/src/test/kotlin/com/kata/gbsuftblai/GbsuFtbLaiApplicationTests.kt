@@ -7,12 +7,12 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
+//@SpringBootTest
 class GbsuFtbLaiApplicationTests {
 
     private val gbsuFtbLaiService: GbsuFtbLaiService = GbsuFtbLaiService()
 
-    @Test
+ //   @Test
     fun contextLoads() {
     }
 
@@ -23,4 +23,18 @@ class GbsuFtbLaiApplicationTests {
         val expected = "GbsuGbsu"
         Assertions.assertThat(converted).isEqualTo(expected)
     }
+
+    @Test
+    @DisplayName("9 should return Gbsu")
+    fun convertNumber_9shouldReturnGbsu() {
+        val converted =gbsuFtbLaiService.convertNumber(9)
+        val expected = "Gbsu"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
+
+
+
+
+
+
 }
