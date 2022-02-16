@@ -22,7 +22,8 @@ export class GbsuFtbLaiFormComponent implements OnInit {
   }
 
   submitNumber(form: FormGroup): void {
-    ;
+    console.log(form.value.inputNumber);
+    
     this.submitNumberOutput.emit(+form.value.inputNumber);
   }
 
