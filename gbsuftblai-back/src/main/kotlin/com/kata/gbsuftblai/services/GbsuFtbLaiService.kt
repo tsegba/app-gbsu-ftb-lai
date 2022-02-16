@@ -10,6 +10,8 @@ class GbsuFtbLaiService {
             return "GbsuGbsu"
         if(inputNumber % 3 == 0)
             return "Gbsu"
+        if(inputNumber.toString().contains('3'))
+            return "Gbsu"
 
         return ""
     }
