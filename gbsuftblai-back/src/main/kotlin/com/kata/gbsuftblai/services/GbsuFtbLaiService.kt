@@ -15,7 +15,9 @@ class GbsuFtbLaiService {
         var result = ""
         result = result.plus(applyDivisibityConvertion(inputNumber))
         result = result.plus(applyOccurrenceConvertion(inputNumber))
-
+        if(result.isEmpty()){
+            return inputNumber.toString()
+        }
         return result
     }
 

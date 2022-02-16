@@ -123,42 +123,78 @@ class GbsuFtbLaiApplicationTests {
     @Test
     @DisplayName("5 should return FtbFtb")
     fun convertNumber_5shouldReturnFtbFtb() {
+        val converted =gbsuFtbLaiService.convertNumber(5)
         val expected = "FtbFtb"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(5)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
     }
 
     @Test
     @DisplayName("51 should return GbsuFtb")
     fun convertNumber_51shouldReturnGbsuFtb() {
+        val converted =gbsuFtbLaiService.convertNumber(51)
         val expected = "GbsuFtb"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(51)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
+
     }
 
     @Test
     @DisplayName("53 should return FtbGbsu")
     fun convertNumber_53shouldReturnFtbGbsu() {
+        val converted =gbsuFtbLaiService.convertNumber(53)
         val expected = "FtbGbsu"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(53)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
     }
 
     @Test
     @DisplayName("15 should return GbsuFtbFtb")
     fun convertNumber_15shouldReturnGbsuFtbFtb() {
+        val converted =gbsuFtbLaiService.convertNumber(15)
         val expected = "GbsuFtbFtb"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(15)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
+
     }
 
     @Test
     @DisplayName("7 should return Lai")
     fun convertNumber_7shouldReturnLai() {
+
+        val converted =gbsuFtbLaiService.convertNumber(7)
         val expected = "Lai"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(7)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
     }
 
     @Test
     @DisplayName("27 should return GbsuLai")
     fun convertNumber_27shouldReturnGbsuLai() {
+
+        val converted =gbsuFtbLaiService.convertNumber(27)
         val expected = "GbsuLai"
-        Assertions.assertThat(gbsuFtbLaiService.convertNumber(27)).isEqualTo(expected)
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
+
+
+    @Test
+    @DisplayName("1 should return 1")
+    fun convertNumber_1shouldReturn1() {
+        val converted =gbsuFtbLaiService.convertNumber(1)
+        val expected = "1"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("2 should return 2")
+    fun convertNumber_2shouldReturn2() {
+
+        val converted =gbsuFtbLaiService.convertNumber(2)
+        val expected = "2"
+        Assertions.assertThat(converted).isEqualTo(expected)
+    }
+
+    @Test
+    @DisplayName("14 should return 14")
+    fun convertNumber_14shouldReturn14() {
+        val converted =gbsuFtbLaiService.convertNumber(14)
+        val expected = "14"
+        Assertions.assertThat(converted).isEqualTo(expected)
     }
 }
