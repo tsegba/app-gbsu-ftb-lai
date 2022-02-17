@@ -5,12 +5,11 @@ import org.springframework.stereotype.Component
 
 @Component
 class GbsuFtbLaiService {
-
     var converterChain: IPartConverter
 
     @Autowired
     constructor(factory: IConverterFactory) {
-        converterChain = factory.createGbsuFtbLaiConverter()
+        this.converterChain = factory.createGbsuFtbLaiConverter()
     }
 
     fun convertNumber(inputNumber: Int): String {

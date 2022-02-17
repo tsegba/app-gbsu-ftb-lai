@@ -1,5 +1,8 @@
 package com.kata.gbsuftblai.services
 
+import org.springframework.stereotype.Component
+
+@Component
 class ConverterFactory : IConverterFactory {
 
     override fun createGbsuFtbLaiConverter(): IPartConverter {
